@@ -11,7 +11,7 @@ public class levelorder {
             int count = mq.size();//before removing any element from qeueu
             for (int i = 0; i < count; i++) {//this for loop is for elements at current level
                 //while queue still has elements in it
-                mq.remove(node);
+                node=mq.remove();
                 //now print it
                 System.out.println(node.data+" ");
                 //add its children
