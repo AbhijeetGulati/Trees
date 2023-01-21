@@ -1,6 +1,19 @@
 import java.util.*;
 
 public class levelorder {
+    public static class Node{
+        //constructor for tree
+        //3 components data of node and its left child and right child
+        int data;
+        Node left;
+        Node right;
+        //constructor
+        Node(int data,Node left,Node right){
+            this.data=data;
+            this.left=left;
+            this.right=right;
+        }
+    }
     //level order traversal
     public static void levelOrder(Node node){
         Queue<Node> mq=new ArrayDeque<>();
