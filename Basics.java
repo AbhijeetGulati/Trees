@@ -1,7 +1,7 @@
 import java.util.*;
 import java.lang.*;
 
-public class Main {
+public class Basics {
     //trees
     public static void display(Node root){
         //base case
