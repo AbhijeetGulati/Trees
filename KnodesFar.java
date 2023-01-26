@@ -48,7 +48,23 @@ public class KnodesFar {
         return false;
     }
     //function 2:to print all the nodes k level below the node which is there in the arraylist
-    
+    //print nodes k levels down
+    public static void klevelsDown(Node node,int k,Node blocker){
+        //NOTE:we are using blocker to avoid duplicates
+        //base case
+        if(node==null || k<0 || node==blocker){
+            //dont print anything
+            return;
+        }
+        if(k==0){
+            //print root node
+            System.out.println(node);
+        }
+        //go left
+        klevelsDown(node.left,k-1,blocker);
+        //go right
+        klevelsDown(node.right,k-1,blocker);
+    }
      //print k nodes far
     // very imp question
     public static void printKnodesFar(Node node,int data,int k){
