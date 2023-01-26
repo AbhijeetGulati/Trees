@@ -19,5 +19,13 @@ public class Klevels {
         if(node==null || k<0){
             return;
         }
+        if(k==0){
+            //print root node
+            System.out.println(node.data);
+        }
+        //go left and right now
+        //if we go to child node level decreases by 1 for that child node
+        klevelsDown(node.left, k-1);
+        klevelsDown(node.right, k-1);
     }
 }
